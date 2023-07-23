@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CourseVideoController;
 use App\Http\Controllers\PixController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\UserCourseHistoryController;
 |
 */
 
+Route::post('/googlelogin', [GoogleAuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
 
